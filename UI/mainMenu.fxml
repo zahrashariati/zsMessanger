@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="573.0" prefWidth="400.0" style="-fx-background-color: #eda678;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.mainPageController">
+   <children>
+      <AnchorPane prefHeight="68.0" prefWidth="400.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <ImageView fx:id="chats" fitHeight="45.0" fitWidth="55.0" layoutX="21.0" layoutY="14.0" onMouseClicked="#handleMenubarButtons" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/chat_bubble_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="newChat" fitHeight="45.0" fitWidth="55.0" layoutX="114.0" layoutY="15.0" onMouseClicked="#handleMenubarButtons" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/add_to_chat_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="info" fitHeight="45.0" fitWidth="55.0" layoutX="215.0" layoutY="13.0" onMouseClicked="#handleMenubarButtons" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/info_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exit" fitHeight="45.0" fitWidth="52.0" layoutX="317.0" layoutY="15.0" onMouseClicked="#EXIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cancel_32px.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Separator layoutX="-9.0" layoutY="190.0" prefHeight="0.0" prefWidth="331.0" rotate="-31.0" style="-fx-background-color: #3D4956;" />
+      <Separator layoutX="50.0" layoutY="215.0" prefHeight="0.0" prefWidth="350.0" rotate="30.3" style="-fx-background-color: #3D4956;" />
+      <Separator layoutX="142.0" layoutY="61.0" orientation="VERTICAL" prefHeight="475.0" prefWidth="0.0" rotate="36.0" style="-fx-background-color: #3D4956;" />
+      <Separator layoutX="58.0" layoutY="127.0" orientation="VERTICAL" prefHeight="320.0" prefWidth="4.0" rotate="12.5" style="-fx-background-color: #3D4956;" />
+      <Separator layoutX="225.0" layoutY="104.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="4.0" rotate="-26.6" style="-fx-background-color: #3D4956;" />
+      <Label alignment="CENTER" layoutX="101.0" layoutY="344.0" prefHeight="53.0" prefWidth="261.0" text="start messaging" textFill="#3d4956">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="chatsAnchor" layoutY="76.0" prefHeight="499.0" prefWidth="400.0" style="-fx-background-color: #3d4956;" visible="false">
+         <children>
+            <Label fx:id="warningOfPrev" alignment="CENTER" layoutX="14.0" layoutY="63.0" prefHeight="19.0" prefWidth="368.0" textFill="#eda678">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="previousGroup" alignment="CENTER" layoutX="57.0" layoutY="216.0" prefHeight="19.0" prefWidth="160.0" textFill="LIGHTSLATEGRAY">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="previousChats" layoutX="56.0" layoutY="140.0" onAction="#previousChatsComboChanged" prefHeight="29.0" prefWidth="160.0" promptText="previous private chats" style="-fx-background-color: #EDA678;" visibleRowCount="5" />
+            <Label alignment="CENTER" layoutX="91.0" layoutY="21.0" prefHeight="19.0" prefWidth="203.0" text="previous chats" textFill="LIGHTSLATEGRAY">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="32.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sort_up_50px.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="previousGroups" layoutX="58.0" layoutY="245.0" onAction="#previousGroupsComboChanged" prefHeight="29.0" prefWidth="160.0" promptText="previous groups" style="-fx-background-color: #EDA678;" visibleRowCount="5" />
+            <ComboBox fx:id="previousChannels" layoutX="57.0" layoutY="353.0" onAction="#previousChannelsComboChanged" prefHeight="29.0" prefWidth="160.0" promptText="previous channels" style="-fx-background-color: #EDA678;" visibleRowCount="5" />
+            <ImageView fitHeight="34.0" fitWidth="45.0" layoutX="17.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/omnichannel_30px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="45.0" layoutX="16.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user_group_30px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="45.0" layoutX="16.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user_50px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="previousChat" alignment="CENTER" layoutX="60.0" layoutY="113.0" prefHeight="19.0" prefWidth="160.0" textFill="LIGHTSLATEGRAY">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="previousChannel" alignment="CENTER" layoutX="60.0" layoutY="331.0" prefHeight="19.0" prefWidth="160.0" textFill="LIGHTSLATEGRAY">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="19.0" fitWidth="35.0" layoutX="241.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/right_30px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="35.0" layoutX="242.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/right_30px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="35.0" layoutX="243.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/right_30px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="294.0" layoutY="146.0" onMouseClicked="#goToChat" text="go to pv" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="302.0" layoutY="251.0" onMouseClicked="#goToGroup" text="go to group" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="302.0" layoutY="359.0" onMouseClicked="#goToChannel" text="go to channel" textFill="LIGHTSLATEGRAY" />
+            <Separator layoutX="295.0" layoutY="164.0" prefHeight="5.0" prefWidth="45.0" />
+            <Separator layoutX="303.0" layoutY="269.0" prefHeight="5.0" prefWidth="64.0" />
+            <Separator layoutX="304.0" layoutY="376.0" prefHeight="5.0" prefWidth="73.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newChatsAnchor" layoutY="76.0" prefHeight="499.0" prefWidth="400.0" style="-fx-background-color: #3D4956;" visible="false">
+         <children>
+            <ImageView fitHeight="19.0" fitWidth="28.0" layoutX="126.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sort_up_50px.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="67.0" layoutY="334.0" mnemonicParsing="false" onAction="#makeANewChannelButton" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #3D4956;" text="new channel" textFill="#eda678">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="66.0" layoutY="234.0" mnemonicParsing="false" onAction="#makeANewGroupButton" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #3D4956;" text="new group" textFill="#eda678">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="27.0" layoutY="334.0" onMouseClicked="#makeANewChannel" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/omnichannel_30px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="39.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/add_user_male_30px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="34.0" layoutX="27.0" layoutY="233.0" onMouseClicked="#makeANewGroup" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user_group_30px.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="93.0" layoutY="13.0" prefHeight="19.0" prefWidth="203.0" text="new chats" textFill="LIGHTSLATEGRAY">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="warningOfContact" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="65.0" prefHeight="19.0" prefWidth="368.0" textFill="#eda678">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_LEFT" layoutX="37.0" layoutY="169.0" prefHeight="19.0" prefWidth="52.0" text="new pv" textFill="#eda678">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="116.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/right_30px.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="70.0" layoutY="258.0" prefHeight="5.0" prefWidth="84.0" />
+            <ComboBox fx:id="contacts" layoutX="161.0" layoutY="143.0" onAction="#contactComboBoxChanged" prefHeight="29.0" prefWidth="129.0" promptText="contacts" style="-fx-background-color: #EDA678;" visibleRowCount="5" />
+            <Separator layoutX="70.0" layoutY="358.0" prefHeight="5.0" prefWidth="84.0" />
+            <ImageView fitHeight="19.0" fitWidth="25.0" layoutX="315.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/right_30px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="19.0" layoutX="355.0" layoutY="152.0" onMouseClicked="#newChatOk" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ok_32px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="contactName" alignment="BOTTOM_LEFT" layoutX="161.0" layoutY="118.0" prefHeight="19.0" prefWidth="143.0" textFill="LIGHTSLATEGRAY">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="infoAnchor" layoutY="76.0" prefHeight="499.0" prefWidth="400.0" style="-fx-background-color: #3d4956;" visible="false">
+         <children>
+            <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="228.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sort_up_50px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="13.0" layoutY="50.0" prefHeight="17.0" prefWidth="321.0" text="if you want to go to your previous chats you have to choose" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="13.0" layoutY="70.0" prefHeight="17.0" prefWidth="382.0" text="then select one chat and press ok. if you want to make new chats you" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="12.0" layoutY="88.0" prefHeight="17.0" prefWidth="84.0" text="have to choose " textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="13.0" layoutY="105.0" prefHeight="17.0" prefWidth="382.0" text="to make a new pv chat you have to select a contact from the combobox" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="12.0" layoutY="122.0" prefHeight="17.0" prefWidth="382.0" text="and if you want to make a new group or channel you have to click on" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="11.0" layoutY="137.0" prefHeight="17.0" prefWidth="382.0" text="their button. You will see more information if you click on their buttons." textFill="LIGHTSLATEGRAY" />
+            <Label alignment="CENTER" layoutX="163.0" layoutY="8.0" prefHeight="17.0" prefWidth="75.0" text="info" textFill="#eda678">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="334.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/chat_bubble_24px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="355.0" layoutY="49.0" prefHeight="17.0" prefWidth="45.0" text="and " textFill="LIGHTSLATEGRAY" />
+            <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="96.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/add_to_chat_32px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="121.0" layoutY="88.0" prefHeight="17.0" prefWidth="278.0" text="and decide what you want to do next. if you want" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="12.0" layoutY="154.0" prefHeight="17.0" prefWidth="291.0" text="If you want to exit the messenger you have to click on " textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="13.0" layoutY="212.0" prefHeight="17.0" prefWidth="154.0" text="write it and enter or click on " textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="13.0" layoutY="195.0" prefHeight="17.0" prefWidth="382.0" text="Now if you are in a chat and you want to send a message you have to" textFill="LIGHTSLATEGRAY" />
+            <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="299.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cancel_32px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="320.0" layoutY="155.0" text="." textFill="LIGHTSLATEGRAY" />
+            <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="164.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sent_24px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="183.0" layoutY="212.0" prefHeight="17.0" prefWidth="216.0" text="and if you want to send a file  or an" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="11.0" layoutY="230.0" prefHeight="17.0" prefWidth="154.0" text="image, you have to click on " textFill="LIGHTSLATEGRAY" />
+            <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="158.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/attach_32px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="177.0" layoutY="230.0" text="." textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="13.0" layoutY="264.0" prefHeight="17.0" prefWidth="382.0" text="If you are in a group chat, you can see the members by clicking its " textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="12.0" layoutY="280.0" prefHeight="17.0" prefWidth="382.0" text="combobox.And if you are an admin in a channel you can see members" textFill="LIGHTSLATEGRAY" />
+            <Label layoutX="10.0" layoutY="295.0" prefHeight="17.0" prefWidth="382.0" text="and admins of that channel by clicking their comboboxes." textFill="LIGHTSLATEGRAY" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

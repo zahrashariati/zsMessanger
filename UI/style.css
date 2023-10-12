@@ -1,0 +1,20 @@
+.text-area .content {-fx-background-color: #3D4956;}
+.text-area {-fx-text-fill: #FFFFFF;-fx-font-size: 13px;}
+
+.scroll-pane{-fx-background: #3D4956;}
+
+#loginUsername{-fx-text-inner-color: #778899}
+#loginPass{-fx-text-inner-color: #778899}
+#signConfirmedPass{-fx-text-inner-color: #778899}
+#signPass{-fx-text-inner-color: #778899}
+#signUsername{-fx-text-inner-color: #778899}
+#channelName{-fx-text-inner-color: #778899}
+#groupName{-fx-text-inner-color: #778899}
+#pvMessage{-fx-text-inner-color: #778899}
+#channelMessage{-fx-text-inner-color: #778899}
+#groupMessage{-fx-text-inner-color: #778899}
+
+#pvTextFlow > Text{-fx-fill: #778899;-fx-font-size: 13px;}
+#groupTextFlow > Text{-fx-fill: #778899;-fx-font-size: 13px;}
+#channelTextFlow > Text{-fx-fill: #778899;-fx-font-size: 13px;}
+#channelAdminTextFlow > Text{-fx-fill: #778899;-fx-font-size: 13px;}

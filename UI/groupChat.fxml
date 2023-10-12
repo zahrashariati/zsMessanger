@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #3D4956;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.groupcontroller">
+   <children>
+      <AnchorPane prefHeight="51.0" prefWidth="401.0" style="-fx-background-color: #EDA678;">
+         <children>
+            <ImageView fitHeight="27.0" fitWidth="34.0" layoutX="7.0" layoutY="12.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="34.0" layoutX="142.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user_groups_26px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="groupName" layoutX="173.0" layoutY="13.0" prefHeight="27.0" prefWidth="94.0" text="group name" textFill="#3d4956">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="groupMembers" layoutX="302.0" layoutY="13.0" prefHeight="25.0" prefWidth="94.0" promptText="members" style="-fx-background-color: #eda678; -fx-background-radius: 20;" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="48.0" layoutY="486.0" prefHeight="2.0" prefWidth="303.0" />
+      <TextField fx:id="groupMessage" layoutX="48.0" layoutY="460.0" onKeyPressed="#sendMessageInGroupWithKey" prefHeight="25.0" prefWidth="303.0" promptText="type a  message" style="-fx-background-color: #3d4956; -fx-background-radius: 30;" />
+      <ImageView fitHeight="27.0" fitWidth="40.0" layoutX="14.0" layoutY="464.0" onMouseClicked="#sendFileInGroup" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/attach_32px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="360.0" layoutY="467.0" onMouseClicked="#sendMessageInGroup" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sent_24px.png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="14.0" layoutY="65.0" prefHeight="391.0" prefWidth="387.0" style="-fx-background-color: #3D4956;">
+         <content>
+            <TextFlow fx:id="groupTextFlow" prefHeight="389.0" prefWidth="371.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

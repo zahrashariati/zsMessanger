@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #3D4956;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.channelWithAdminController">
+   <children>
+      <AnchorPane prefHeight="53.0" prefWidth="400.0" style="-fx-background-color: #eda678;">
+         <children>
+            <ComboBox fx:id="channelMembers" layoutX="301.0" layoutY="1.0" prefHeight="25.0" prefWidth="97.0" promptText="members" style="-fx-background-color: #EDA678;" />
+            <ComboBox fx:id="channelAdmins" layoutX="301.0" layoutY="27.0" prefHeight="25.0" prefWidth="97.0" promptText="admins" style="-fx-background-color: #eda678;" />
+            <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="12.0" layoutY="10.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/back_32px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="135.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/omnichannel_24px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="channelAdminName" layoutX="169.0" layoutY="12.0" prefHeight="32.0" prefWidth="118.0" text="channel name" textFill="#3d4956">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="25.0" fitWidth="32.0" layoutX="359.0" layoutY="465.0" onMouseClicked="#sendMessageInChannel" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sent_24px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="16.0" layoutY="459.0" onMouseClicked="#sendFileInChannel" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/attach_32px.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="channelMessage" layoutX="51.0" layoutY="462.0" onKeyPressed="#sendMessageInChannelWithKey" prefHeight="25.0" prefWidth="301.0" promptText="type a message" style="-fx-background-color: #3D4956; -fx-background-radius: 20;" />
+      <Separator layoutX="51.0" layoutY="487.0" prefHeight="4.0" prefWidth="301.0" />
+      <ScrollPane layoutX="10.0" layoutY="66.0" prefHeight="382.0" prefWidth="390.0" style="-fx-background-color: #3D4956;">
+         <content>
+            <TextFlow fx:id="channelAdminTextFlow" prefHeight="380.0" prefWidth="372.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

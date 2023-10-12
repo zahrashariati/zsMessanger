@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #3D4956;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.controller">
+   <children>
+      <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="126.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/login_24px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="165.0" layoutY="26.0" prefHeight="32.0" prefWidth="69.0" text="LOGIN" textFill="#eda678">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="100.0" layoutY="188.0" prefWidth="200.0" />
+      <Separator layoutX="100.0" layoutY="282.0" prefWidth="200.0" />
+      <PasswordField fx:id="loginPass" layoutX="100.0" layoutY="257.0" onKeyPressed="#loginContinuedWithKey" prefHeight="25.0" prefWidth="200.0" promptText="enter your password" style="-fx-background-color: #3D4956;" />
+      <TextField fx:id="loginUsername" layoutX="100.0" layoutY="163.0" prefHeight="25.0" prefWidth="200.0" promptText="enter your username" style="-fx-background-color: #3D4956;" />
+      <Button layoutX="149.0" layoutY="325.0" mnemonicParsing="false" onAction="#loginContinued" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #EDA678; -fx-background-radius: 20;" text="LOGIN" textFill="#3d4956">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="109.0" layoutY="145.0" prefHeight="17.0" prefWidth="120.0" textFill="LIGHTSLATEGRAY" />
+      <Label layoutX="107.0" layoutY="242.0" prefHeight="17.0" prefWidth="120.0" textFill="LIGHTSLATEGRAY" />
+      <Label fx:id="loginLabel" layoutX="27.0" layoutY="101.0" prefHeight="17.0" prefWidth="361.0" textFill="#eda678" />
+      <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="6.0" layoutY="468.0" onMouseClicked="#backToWelcome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/left_26px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

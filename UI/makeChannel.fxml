@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="539.0" prefWidth="403.0" style="-fx-background-color: #3D4956;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.makeChannelController">
+   <children>
+      <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="4.0" layoutY="17.0" onMouseClicked="#backToMainMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back_50px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="157.0" layoutY="7.0" prefHeight="40.0" prefWidth="152.0" text="make a new channel" textFill="LIGHTSLATEGRAY">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="33.0" layoutX="124.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/omnichannel_30px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="61.0" prefHeight="17.0" prefWidth="381.0" text="Choose a name for your group. Then select your group members by " textFill="LIGHTSLATEGRAY" />
+      <Label layoutX="20.0" layoutY="118.0" prefHeight="17.0" prefWidth="381.0" text="(make sure your name is included in both of them.) Then click on " textFill="LIGHTSLATEGRAY" />
+      <Label layoutX="20.0" layoutY="100.0" prefHeight="17.0" prefWidth="381.0" text="add channel members to set them. Do it again for the channel admins" textFill="LIGHTSLATEGRAY" />
+      <Label layoutX="20.0" layoutY="80.0" prefHeight="17.0" prefWidth="381.0" text="pressing CTRL + clicking on the users you want to add and click on" textFill="LIGHTSLATEGRAY" />
+      <Label layoutX="22.0" layoutY="136.0" prefHeight="17.0" prefWidth="381.0" text="continue to go to the channel chat page." textFill="LIGHTSLATEGRAY" />
+      <ListView fx:id="channelMemberAdding" layoutX="24.0" layoutY="218.0" prefHeight="211.0" prefWidth="133.0" />
+      <ListView fx:id="channelAdminAdding" layoutX="239.0" layoutY="216.0" prefHeight="211.0" prefWidth="133.0" />
+      <Label layoutX="24.0" layoutY="197.0" prefHeight="17.0" prefWidth="133.0" text="select the members" textFill="LIGHTSLATEGRAY" />
+      <Label layoutX="239.0" layoutY="198.0" prefHeight="17.0" prefWidth="133.0" text="select the admins" textFill="LIGHTSLATEGRAY" />
+      <Label fx:id="warning" layoutX="24.0" layoutY="171.0" prefHeight="17.0" prefWidth="370.0" textFill="#eda678" />
+      <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="17.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/add_user_male_30px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="238.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/add_user_male_30px.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="39.0" layoutY="437.0" mnemonicParsing="false" onAction="#addChannelMembers" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #3d4956;" text="add channel members" textFill="#eda678" />
+      <Button layoutX="260.0" layoutY="436.0" mnemonicParsing="false" onAction="#addChannelAdmins" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #3d4956;" text="add channel admins" textFill="#eda678" />
+      <Button layoutX="280.0" layoutY="483.0" mnemonicParsing="false" onAction="#continueToChannel" style="-fx-background-color: #eda678; -fx-background-radius: 20;" text="continue" />
+      <TextField fx:id="channelName" layoutX="67.0" layoutY="481.0" promptText="name your channel" style="-fx-background-color: #3D4956;" />
+      <ImageView fitHeight="22.0" fitWidth="29.0" layoutX="42.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/identification_documents_32px.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="67.0" layoutY="505.0" prefHeight="3.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>
